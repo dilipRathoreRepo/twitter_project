@@ -4,6 +4,8 @@ import oauth2
 
 from database import CursorFromConnectionFromPool
 from twitter_utils import consumer
+import constants
+import urllib.parse as urlparse
 
 
 class User:
@@ -41,3 +43,4 @@ class User:
             print('An error occurred while searching!')
         else:
             return json.loads(content.decode('utf-8'))
+
