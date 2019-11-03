@@ -8,7 +8,7 @@ URI = 'https://api.twitter.com/1.1/search/tweets.json?q=computers+filter:images'
 VERB = 'GET'
 
 Database.initialise(user='postgres', password='admin', database='learning', host='localhost')
-user = User.load_from_db_by_email(email)
+user = User.load_from_db_by_screen_name(email)
 
 if not user:
     print("Entry does not exist.. creating a record in users table")
